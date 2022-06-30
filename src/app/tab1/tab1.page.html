@@ -1,17 +1,88 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar color="dark">
+    <ion-title> Home </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" color="light">
+  <ion-segment (ionChange)="segmentChanged($event)" color="secondary">
+    <ion-segment-button value="standard">
+      <ion-label>Animes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="hybrid">
+      <ion-label>Mangas</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="sat">
+      <ion-label>Novels</ion-label>
+    </ion-segment-button>
+  </ion-segment>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <img
+            src="https://criticalhits.com.br/wp-content/uploads/2021/05/46335c5fc42a83abec5625ecef762fe9.jpg"
+            alt=""
+          />
+          <ion-card-content>
+            <p>
+              <strong> One Piece </strong>
+            </p>
+            <p class="ion-text-right">
+              <ion-badge color="tertiary">EPS 1022</ion-badge>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+        <ion-col size="6">
+          <ion-card>
+            <img
+              src="https://i0.wp.com/wallpapertag.com/wallpaper/full/d/8/9/828849-new-naruto-wallpaper-1920x1080-retina.jpg"
+              alt=""
+            />
+            <ion-card-content>
+              <p>
+                <strong> Naruto Shippuden </strong>
+              </p>
+              <p class="ion-text-right">
+                <ion-badge color="tertiary">EPS 500</ion-badge>
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card>
+            <img
+              src="https://i0.wp.com/i.pinimg.com/originals/d8/40/d5/d840d57c779678adcea19de5339caacb.png"
+              alt=""
+            />
+            <ion-card-content>
+              <p>
+                <strong> Dragon Ball Super </strong>
+              </p>
+              <p class="ion-text-right">
+                <ion-badge color="tertiary">EPS 131</ion-badge>
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card>
+            <img
+              src="https://images7.alphacoders.com/897/thumb-1920-897945.jpg"
+              alt=""
+            />
+            <ion-card-content>
+              <p>
+                <strong> Dangaropa </strong>
+              </p>
+              <p class="ion-text-right">
+                <ion-badge color="tertiary">EPS 13</ion-badge>
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+    </ion-row>
+    </ion-grid>
 </ion-content>
